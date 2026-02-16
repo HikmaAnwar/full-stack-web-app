@@ -6,16 +6,16 @@ import (
     "net/http"
 
     "github.com/gin-gonic/gin"              // assuming you're using Gin
-    "github.com/swaggo/files"               // swagger static files
+    swaggerFiles "github.com/swaggo/files"               // swagger static files
     ginSwagger "github.com/swaggo/gin-swagger"
     "golang.org/x/crypto/bcrypt"            // for password hashing
     _ "github.com/HikmaAnwar/full-stack-web-app/backend/docs" // generated docs
 )
 
 
-// @title           Full Stack Web App API
+// @title           Web App API
 // @version         1.0
-// @description     This is a sample server for a full-stack web app.
+// @description     This is a sample server for a web app.
 // @termsOfService  http://swagger.io/terms/
 
 // @contact.name   API Support
@@ -36,7 +36,7 @@ func main() {
     fmt.Println("Example hash:", string(hash))
 
     // Example Swagger setup
-    r.GET("/swagger/*any", ginSwagger.WrapHandler(files.Handler))
+    r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
     // Health check endpoint
     r.GET("/health", healthCheck)
