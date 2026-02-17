@@ -50,11 +50,11 @@ const docTemplate = `{
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = &swag.Spec{
 	Version:          "1.0",
-	Host:             "localhost:8080",
+	Host:             "localhost:8088",
 	BasePath:         "/",
 	Schemes:          []string{},
-	Title:            "Full Stack Web App API",
-	Description:      "This is a sample server for a full-stack web app.",
+	Title:            "Web App API",
+	Description:      "This is a sample server for a web app.",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
 	LeftDelim:        "{{",
