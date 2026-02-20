@@ -1,21 +1,20 @@
 package main
 
 import (
-    "fmt"
     "log"
     "net/http"
     "os"
     "strings"
     "time"
 
-
     "github.com/joho/godotenv"
     "github.com/gin-gonic/gin"              // assuming you're using Gin
     "github.com/gin-contrib/cors"
     swaggerFiles "github.com/swaggo/files"               // swagger static files
     ginSwagger "github.com/swaggo/gin-swagger"
-    "golang.org/x/crypto/bcrypt"            // for password hashing
-    _ "Web-app/backend/docs" // generated docs
+    "Web-app/backend/database"
+    "Web-app/backend/routes"
+    docs "Web-app/backend/docs" // generated docs
 )
 
 
